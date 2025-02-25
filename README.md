@@ -1,26 +1,13 @@
-The AXP (Application eXtreme Properties) format is a simple application description format. One JSON file describes a full application.
 
-This format can create a webpage, desktop, and mobile app with limitations. Can not build webshops or games. 
-
-AXP focuses on analytics, data editing, and data visualization.  Help the system to represent information that is not effective with words. 
-
-But too big to put on an Excel table. 
-
-The original main goal was to understand the Deep  Learning result.
+# AXP Format Overview
+The AXP (Application eXtreme Properties) format is a straightforward application description model that uses a single JSON file to define an entire application. This format can be used to create webpages, desktop applications, and mobile apps; however, it has limitations and cannot be used to build more complex applications like e-commerce sites or games. AXP primarily focuses on analytics, data editing, and data visualization, allowing systems to represent information that is difficult to convey with words, especially when the data is too large to fit into an Excel spreadsheet. Initially, the goal of AXP was to aid in understanding the results of deep learning, but I now use it to build effective data processing systems, such as my agency management tools and a daily stand-up report system.
 
 
-How it works?
 
+# How it works?
 
-The system has 4 modules: 2 sides, and 2 layers.
+The system consists of four modules, divided into two sides and two layers. The sides are the front-end and back-end, which function as separate MVC-like systems. Both can operate in standalone, peer-to-peer (P2P), or swarm modes. The two layers are the data transfer protocol and the data storage layer, with one layer on the front end and two on the back end. Each module has its own submodules. Currently, the front end supports the Hel tools and Vue.js, while the back end only supports Laravel with Eloquent. Future plans include extending support to Express and Panthera.
 
-The sides are front-end and back-end. They are separate MVC-like systems.  Both can work in standalone,  p2p, or swarm mode. 
-
-The 2 layers: are the data transfer protocol and, the data storage layer.
-
- 1 on the front side, 2 on the backend side. All modules have submodules. 
-
- At the moment the front end uses the hell tool. Far from optimal because that was built for the 13k games challenge. But it was a fast and time-effective solution.  Logical if I do not affect any tool that I used in the past or any of my contracts, and probably never use it in my work. Sorry for that.
 
 
  Data format:
@@ -37,3 +24,26 @@ The 2 layers: are the data transfer protocol and, the data storage layer.
  -The variable name snakifid. ```this_is_a_variable```.
  -Functions that started with Upper case should be managed as a class. 
  -Only class names can start with upper case. NOTHING ELSE CAN START WITH UPPER CASE. In theory, the builder recognizes your mistake. However, that has no guarantee. 
+
+
+
+# FAQ
+
+
+### **Why not YAML?**  
+
+ **Short**: Because it's not.  
+
+ **Long**: Processing YAML is more complex and prone to bugs. Given my limited time and zero budget for this project, I aim to build quickly and with minimal complications.
+
+
+### **Can I have access to the backend builder?**
+
+ **Short**: Not yet.  
+
+ **Long**: The only existing version is rust-based, which I use for my games, machine learning projects, and job searches. Thus, I cannot open-source it yet. A Python-based version is planned for open source in the future.
+
+
+### **Can I have access to the frontend builder?** 
+
+ **Short**: Yes, but that should be access over an api soon.
